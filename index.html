@@ -5,15 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+  background-color: red;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+.open {
+  display: block;
+  height: 30px;
+  background-color: blueviolet;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: brown;
+}
+
+.container {
+  background-color: coral;
+}
+    </style>
 </head>
 <body>
     <div class="menu">
         <button class="open" id="btn"></button>
         <div class="container" id="container">
             <ul class="list">
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
+                <li>Larrymenta</li>
+                <li>QuiQui Ricky</li>
+                <li>Tibu</li>
             </ul>
         </div>
     </div>
