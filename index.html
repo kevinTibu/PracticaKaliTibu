@@ -1,53 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        body {
-  background-color: red;
-}
+  </head>
 
-*,
-*::after,
-*::before {
-    padding: 0;
-    margin: 0;
-}
+  <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v7.0",
+        });
+      };
 
-.open {
-  display: block;
-  height: 30px;
-  background-color: blueviolet;
-  width: 100%;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-}
-
-button:hover {
-  background-color: brown;
-}
-
-.container {
-  background-color: coral;
-}
-    </style>
-</head>
-<body>
-    <div class="menu">
-        <button class="open" id="btn"></button>
-        <div class="container" id="container">
-            <ul class="list">
-                <li>Larrymenta</li>
-                <li>QuiQui Ricky</li>
-                <li>Tibu</li>
-            </ul>
-        </div>
-    </div>
-</body>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 </html>
